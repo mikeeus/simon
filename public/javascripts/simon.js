@@ -122,7 +122,7 @@ function showError(message){
   setTimeout(function(){
     $('.display').removeClass('error-display');
     msg.fadeOut();        
-  }, 3000);
+  }, 2000);
 }
 function showSuccess(){
   msg = $('.message');
@@ -130,7 +130,7 @@ function showSuccess(){
   msg.fadeIn(500);
   $('.message').addClass('success-message');
   setTimeout(function(){
-    $('.display').removeClass('success-message');
+    $('.message').removeClass('success-message');
     msg.fadeOut(500);        
   }, 5000);
 }
@@ -142,7 +142,7 @@ function failStrict(){
   setTimeout(function(){
     $('.display').removeClass('error-display');
     msg.fadeOut(500);                    
-  }, 3000);
+  }, 2000);
 }
 
 function playSound(color){
