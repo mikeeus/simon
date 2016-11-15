@@ -122,7 +122,7 @@ function showError(message){
   setTimeout(function(){
     $('.display').removeClass('error-display');
     msg.fadeOut();        
-  }, 1000);
+  }, 3000);
 }
 function showSuccess(){
   msg = $('.message');
@@ -142,7 +142,7 @@ function failStrict(){
   setTimeout(function(){
     $('.display').removeClass('error-display');
     msg.fadeOut(500);                    
-  }, 1000);
+  }, 3000);
 }
 
 function playSound(color){
