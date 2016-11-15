@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=UTF-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simon Game</title>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/javascripts/simon.js"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/stylesheets/style.css">  
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro:200|Montserrat|Roboto+Slab:100|Work+Sans:200" rel="stylesheet">
+<body>
+  <div class="title">Simon Game</div>
+  <div class="mode" onclick="toggleStrict()">Strict Mode <span id="mode-toggle"></span></div>
+  <div class="start" onclick="startSeries()">Start <span id="start-toggle"></span></div>
+  <div class="wrapper">
+    <div class="simon-frame">
+      <div class="display">
+        <span class="level">1</span>
+      </div>
+      <div class="buttons">
+        <div class="red" onclick="playerMove('red')"></div>
+        <div class="green" onclick="playerMove('green')"></div>
+        <div class="blue" onclick="playerMove('blue')"></div>
+        <div class="yellow" onclick="playerMove('yellow')"></div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="message"></div>
+
+</body>
+</html>

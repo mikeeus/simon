@@ -1,0 +1,211 @@
+$red: #f6511d;
+$blue: #00a6ed;
+$green: #7fb800;
+$yellow: #ffb400;
+
+body {
+  padding: 15px;
+  // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
+  background: #212121;
+}
+*{
+  transition: 300ms;
+}
+a {
+  color: #00B7FF;
+}
+.title{
+  position: absolute;
+  font-size: 2em;
+  color: #616060;
+  border-bottom: 1px solid;
+}
+.wrapper{
+  margin-top: 80px;
+}
+.start, .mode{
+  cursor: pointer;
+  position: absolute;
+  color: #525252; 
+  transition: 300ms;
+}
+.start{
+  font-size: 3em;
+  top: 50px;
+  &:hover{
+    color: #888888;
+    #start-toggle{
+      background: #888;
+    }
+  }
+  #start-toggle{
+    top: 17px;
+    right: -36px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #212121;
+    border-radius: 50%;
+    border: 2px solid #333333
+  }
+}
+.active-start{
+  color: #888;
+  #start-toggle{
+    background: #888;
+  }
+}
+.mode{ 
+  font-size: 2em;
+  top: 15px;
+  right: 50px;
+  &:hover{
+    color: #888888;
+    #mode-toggle{
+      background: #888;
+    }
+  }
+  #mode-toggle{
+    top: 8px;
+    right: -30px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: #212121;
+    border-radius: 50%;
+    border: 2px solid #333333;
+  }
+}
+.mode-active{
+  color: #888888;
+  #mode-toggle{
+    background: #888;
+  }
+}
+.simon-playing{
+  border: 1px solid white !important;
+}
+.simon-frame{
+  position: relative;
+  transform: rotate(45deg);
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #3e3d3d;
+  border-radius: 24%;
+  text-align: center;
+  // SCORE DISPLAY
+  .display{
+    transform: rotate(-45deg);
+    width: 100px;
+    height: 80px;
+    border: 1px solid #3a3a3a;
+    border-radius: 20%;
+    position: absolute;
+    top: 208px;
+    left: 200px;
+    .level{
+      font-size: 3.8em;
+      color: #616060;
+    }
+    .active-level{
+      color: #e2e2e2 !important;
+    }
+  }
+  .active-display{
+    border: 1px solid green;
+    .level{
+      color: green;
+    }
+  }
+  .error-display{
+    border: 1px solid #c71a1a;
+    .level{
+      color: #c71a1a;
+    }    
+  }
+  // BUTTONS
+  .red, .green, .blue, .yellow{
+    cursor: pointer;
+    position: absolute;
+    border: 10px solid rgba(33,33,33,0.5);
+    transition: 300ms;
+    width: 46%;
+    height: 46%;
+    &:active, &:focus{
+      transition: 100ms;
+      border: 20px solid #2f2f2f;
+      border: 50px solid rgba(255, 255, 255, 0.5) !important;      
+    }
+  }
+  .red{
+    top: 10px; left: 10px;
+    background: $red;  
+    border-top-left-radius: 50%;
+    border-radius: 50%;
+    &:hover{
+      background: lighten($red, 10%);
+    }
+    &:active, &:focus{
+      background: darken($red, 10%);
+    }
+  }
+  .blue{
+    top: 10px; right: 10px;
+    background: $blue;  
+    border-top-right-radius: 50%;
+    border-radius: 50%;
+    &:hover{
+      background: lighten($blue, 10%);
+    }
+    &:active, &:focus{
+      background: darken($blue, 10%);
+    }
+  }
+  .green{
+    bottom: 10px; left: 10px;
+    background: $green;  
+    border-bottom-left-radius: 50%;
+    border-radius: 50%;
+    &:hover{
+      background: lighten($green, 10%);
+    }
+    &:active, &:focus{
+      background: darken($green, 10%);
+    }
+  }
+  .yellow{
+    bottom: 10px; right: 10px;
+    background: $yellow;  
+    border-bottom-right-radius: 50%;
+    border-radius: 50%;
+    &:hover{
+      background: lighten($yellow, 10%);
+    }
+    &:active, &:focus{
+      background: darken($yellow, 10%);
+    }
+  }
+}
+.active-yellow, .active-red, .active-blue, .active-green{
+  border: 10px solid white !important;
+}
+// message
+.message{
+  display: none;
+  background: #2f2f2f;
+  position: absolute;
+  bottom: 30px;
+  font-size: 1.5em;
+  border: 1px solid #6d6d6d;
+  padding: 10px;
+  border-radius: 10px;
+  color: #c1c1c1;
+}
+.success-message{
+  color: green;
+  border: 2px solid green;
+  font-size: 2em;
+  background: white;
+}
